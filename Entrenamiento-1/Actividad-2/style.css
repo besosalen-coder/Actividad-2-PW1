@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color: #bce8eaba;
+}
+nav{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    border-bottom: 0.1em solid black;
+    background-color: #97c4d0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color: rgb(23, 7, 53);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+footer{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    border-top: 0.1em solid black;
+    background-color: #97c4d0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    margin-top: 3em;
+    margin-bottom: 2em;
+    padding: 2em 10%;
+    min-height: calc(100vh - 5em);
+    overflow-y: auto;
+}
+.receta, .contenedor-formulario{
+    border: 0.1em solid black;
+    border-radius: 1.5em;
+    padding: 1.2em;
+    margin-bottom: 2em;
+    background-color: #97c4d0;
+}
+.receta h2{
+    text-align: center;
+    margin-top: 0;
+}
+.imagen{
+    width: 12em;
+    height: 12em;
+    background-color: grey;
+    border-radius: 20%;
+    border: 0.1em solid black;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fila-formulario{
+    padding: 0.2em 0;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 1em;
+}
+.fila-formulario label{
+    width: 30%;
+    font-weight: bold;
+    text-align: left;
+}
+.fila-formulario input, .fila-formulario textarea{
+    padding: 0.5em;
+    border: 0.1em solid black;
+    width: 70%;
+}
+.botones-formulario{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    margin-top: 1em;
+}
+.boton-enviar{
+    padding: 0.5em 1em;
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.boton-enviar:hover{
+    background-color: #5cb85c;
+    color: white;
+}
+.boton-cancelar{
+    padding: 0.5em 1em;
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.boton-cancelar:hover{
+    background-color: #d9534f;
+    color: white;
+}

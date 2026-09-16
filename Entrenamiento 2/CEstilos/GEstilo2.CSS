@@ -1,0 +1,103 @@
+body {
+    /* width: 100%;*/
+    margin: 0;
+    
+}
+
+
+
+
+main .grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    /* background-color: aqua;*/
+    font-size: 3rem;
+
+
+
+}
+
+main .vista_1,
+main .vista_2 {
+    background-color: rgb(151, 235, 151);
+    border: 0.2rem solid black
+}
+
+main .vista_3,
+main .vista_4 {
+    background-color: rgb(248, 231, 78);
+    border: 0.2rem solid black
+}
+
+main .vista_5 {
+
+    background-color: salmon;
+    border: 0.2rem solid black;
+}
+
+main .vista_6 {
+
+    background-color: rgb(46, 127, 182);
+    border: 0.2rem solid black;
+}
+
+.vista_1,
+.vista_2,
+.vista_3,
+.vista_4,
+.vista_5,
+.vista_6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:320px) {
+
+    main .grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1.5fr) repeat(3,1fr);  
+        grid-template-areas: "n6 n6"
+            "n5 n5"
+            "n3 n4"
+            "n2 n2"
+            "n1 n1";
+          
+    }
+
+    main .vista_6 {
+        grid-area: n6;
+        background: salmon
+    }
+
+    main .vista_5 {
+        grid-area: n5;
+        background: rgb(46, 127, 182)
+    }
+
+    main .vista_3 {
+        grid-area: n3;
+        background: rgb(248, 231, 78)
+    }
+
+    main .vista_4 {
+        grid-area: n4;
+        background: rgb(248, 231, 78);
+    }
+
+    main .vista_2 {
+        grid-area: n2;
+        background: rgb(151, 235, 151)
+    }
+
+    main .vista_1 {
+        grid-area: n1;
+        background: rgb(151, 235, 151)
+    }
+
+
+
+}

@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-size: 3rem;
+    box-sizing: border-box;
+}
+
+
+.pantalla_colores {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fila1 {
+    display: flex;
+    height: 60%;
+}
+
+.color_1,
+.color_4 {
+    width: 25%;
+    background-color: rgb(5, 240, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid black;
+
+}
+
+.grupo_color_f1 {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 185, 5);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.color_2,
+.color_3 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid black;
+}
+
+
+.fila2 {
+    display: flex;
+    height: 40%;
+}
+
+.color_5 {
+    width: 50%;
+    background-color: darksalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid black;
+
+}
+
+.color_6 {
+    width: 50%;
+    background-color: rgb(46, 127, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid black;
+
+}
+
+
+
+@media screen and (max-width:768px) {
+
+
+    .fila1,
+    .fila2,
+    .grupo_color_f1 {
+        display: contents;
+    }
+
+    .pantalla_colores {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    
+
+    .pantalla_colores .color_1,
+    .pantalla_colores .color_3,
+    .pantalla_colores .color_5,
+    
+    .pantalla_colores .color_2,
+    .pantalla_colores .color_4,
+    .pantalla_colores .color_6 {
+        width: 100%;
+        height: 100%;
+         box-sizing: border-box;
+    }
+
+ 
+    .pantalla_colores .color_1,
+    .pantalla_colores .color_2 {
+        background-color: rgb(5, 240, 142);
+    }
+
+
+
+    
+
+
+    .pantalla_colores .color_3,
+    .pantalla_colores .color_4 {
+        background-color:  rgb(240, 185, 5);
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .fila1,
+    .fila2,
+    .grupo_color_f1 {
+        display: contents;
+    }
+
+    .pantalla_colores {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .color_1,
+    .color_2,
+    .color_3,
+    .color_4,
+    .color_5,
+    .color_6 {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+
+    .color_1,
+    .grupo_color_f1 .color_2 {
+        background-color: rgb(5, 240, 142);
+        border: 0.2rem solid black;
+
+    }
+
+    .grupo_color_f1 .color_3,
+    .color_4 {
+        background-color: rgb(240, 185, 5);
+        border: 0.2rem solid black;
+
+
+    }
+
+    .color_5 {
+        background-color: rgb(46, 127, 182);
+    }
+
+    .color_6 {
+        background-color: darksalmon;
+    }
+
+}
